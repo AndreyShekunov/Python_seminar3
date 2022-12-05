@@ -13,11 +13,11 @@ def fibo(n):
 # функция создания и заполнения списка Негафибоначчи
 def negafib(n):
     lst = []
+    lst.insert(0, 0) # вставка 0 в центр списка
     for i in range(1, n + 1):
-        lst.append(fibo(i)) 
-        lst.insert(0, 0)
+        lst.append(fibo(i)) # вставка положительных чисел Фибоначчи с помощью функции fibo в конец списка
     for i in range(1, n + 1):
-        lst.insert(0, (-1) ** (i + 1) * fibo(i))
+        lst.insert(0, (-1) ** (i + 1) * fibo(i)) # вставка отрицательных чисел Фибоначчи в начало списка
     return lst
 
 n = int(input('Введите число: '))
